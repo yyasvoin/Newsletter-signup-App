@@ -1,6 +1,7 @@
 # Newsletter signup App
 
-Newsletter signup using Node.js/Express and the Mailchimp API. Fill in your [API_KEY] in app.js - used for education and learning purpose.
+Newsletter signup using Node.js/Express and the Mailchimp API. Fill in your [API_KEY] in app.js.
+Used for education and learning purpose.
 
 ## Demo
 

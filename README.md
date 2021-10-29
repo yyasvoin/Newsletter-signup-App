@@ -8,7 +8,7 @@ https://guarded-retreat-72820.herokuapp.com/
 
 ## How to develop it
 
-- Clone on your local machine by using `git@github.com:yyasvoin/todoList.git`
+- Clone on your local machine by using `git@github.com:yyasvoin/Newsletter-signup-App.git`
 - Navigate into the main directory
 - Run `npm install` to install node modules
 - Fill in your [API_KEY] in app.js

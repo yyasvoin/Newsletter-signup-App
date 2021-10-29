@@ -4,6 +4,9 @@ const path = require('path');
 const fs = require('fs');
 const app = express();
 const https = require('https');
+require('dotenv').config();
+
+// console.log(process.env);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -32,11 +35,12 @@ app.post('/', function (req, res) {
 		],
 	};
 
+	const api_key = process.env.API_KEY;
 	const jsonData = JSON.stringify(data);
 	const url = 'https://us6.api.mailchimp.com/3.0/lists/cf43d7bc5f';
 	const options = {
 		method: 'POST',
-		auth: 'yuri:32ee9f6da1d82d6b6873f4c5b0e8b2be-us6',
+		auth: api_key,
 	};
 
 	const request = https.request(url, options, function (response) {
@@ -62,8 +66,3 @@ app.post('/failure', function (req, res) {
 app.listen(process.env.PORT || 3000, function () {
 	console.log('Server is running on port 3000');
 });
-
-// API
-// 32ee9f6da1d82d6b6873f4c5b0e8b2be-us6
-// List Id
-// cf43d7bc5f
